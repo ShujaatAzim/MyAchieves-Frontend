@@ -24,6 +24,7 @@ function App() {
 
   return (
     <div>
+      <h1>Click a button to see some stuff:</h1>
       <button onClick={() => setDisplayed("users")}>Users</button>
       <button onClick={() => setDisplayed("games")}>Games</button>
       <button onClick={() => setDisplayed("achievements")}>Achievements</button>
