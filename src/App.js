@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import List from './Components/List'
 
 function App() {
 
@@ -29,13 +30,8 @@ function App() {
       <button onClick={() => setDisplayed("games")}>Games</button>
       <button onClick={() => setDisplayed("achievements")}>Achievements</button>
 
-      <ol>
-      { displayed === "users" ? users.map(user => <li key={user.name}>{user.name}</li>) :
-        displayed === "games" ? games.map(game => <li key={game.name}>{game.name}</li>) :
-        displayed === "achievements" ? achievements.map(achievement => <li key={achievement.title}>{achievement.title}</li>) :
-        null
-      }
-      </ol>
+      <List users={users} games={games} achievements={achievements} displayed={displayed} />
+
     </div>
   );
 }
